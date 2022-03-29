@@ -6,7 +6,6 @@ import (
 	"html/template"
 	"io/ioutil"
 	"net/http"
-	"os"
 
 	"github.com/gorilla/mux"
 )
@@ -24,7 +23,7 @@ type Products struct {
 var productsUrl string
 
 func init() {
-	productsUrl = os.Getenv("PRODUCT_URL")
+	productsUrl = "http://localhost:8081"
 }
 
 func loadProducts() []Product {
